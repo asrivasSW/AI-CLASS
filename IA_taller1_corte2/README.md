@@ -8,7 +8,7 @@
 
 ## ✨ Descripción del Proyecto
 
-Este repositorio contiene un Jupyter Notebook (`.ipynb`) desarrollado como taller del segundo corte para realizar **análisis y manipulación de datos** utilizando las librerías fundamentales de Python: **NumPy** y **Pandas**.
+Este repositorio contiene un Notebook (`.ipynb`) desarrollado como taller del segundo corte para realizar **análisis y manipulación de datos** utilizando las librerías fundamentales de Python: **NumPy** y **Pandas**.
 
 El proyecto se centra en dos áreas principales:
 1.  **Fundamentos de NumPy:** Creación de arreglos y cálculo de medidas de tendencia central y dispersión.
