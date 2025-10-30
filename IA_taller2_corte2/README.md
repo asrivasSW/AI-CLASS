@@ -13,25 +13,29 @@
 ---
 
 ## 🎯 Objetivo del Trabajo
-El objetivo principal de este taller es aplicar los fundamentos de la programación en **Python** para la manipulación y análisis de datos, utilizando las librerías especializadas **NumPy** y **Pandas**.  
-Específicamente, se busca:
+El objetivo principal de este taller es aplicar los fundamentos de la programación en **Python** para la manipulación y análisis de datos, utilizando las librerías especializadas **NumPy**, **Pandas**, **SciPy** y **Matplotlib**.  
+En particular, se busca:
 
-- Demostrar el manejo eficiente de arreglos numéricos y el cálculo de medidas estadísticas fundamentales (media, moda, varianza).  
-- Realizar el análisis exploratorio de datos de un conjunto de estudiantes, incluyendo filtrado de información y agrupamiento.  
-- Generar visualizaciones (gráficos de barras, dispersión e histogramas) para interpretar la distribución y relación de las variables.  
+- Dominar el uso de estructuras numéricas y estadísticas en NumPy.  
+- Analizar y limpiar datos reales en Pandas.  
+- Generar visualizaciones interpretativas (barras, dispersión, histogramas).  
+- Aplicar conceptos estadísticos como sesgo, curtosis, pruebas de hipótesis y correlaciones.  
+- Validar supuestos de normalidad e independencia de variables mediante pruebas estadísticas.
 
 ---
 
 ## 💡 Descripción del Proyecto o Taller
-Este proyecto se desarrolla en un entorno **Google Colab** mediante un **Notebook (.ipynb)** que aborda ejercicios prácticos divididos en cuatro bloques principales:
+Este proyecto se desarrolla en **Google Colab** a través de un **Notebook (.ipynb)** que contiene ejercicios prácticos organizados en seis bloques temáticos:
 
-1. **Análisis de sesgo y curtosis de las notas de los estudiantes.**  
-2. **Demostración del Teorema del Límite Central** usando una distribución uniforme.  
-3. **Aplicación de distribuciones de probabilidad (exponencial y Poisson)** con ejemplos del mundo real.  
-4. **Análisis de correlaciones** (positiva, negativa y nula) mediante datos sintéticos.
+1. **Medidas de forma:** cálculo de sesgo y curtosis en notas de estudiantes.  
+2. **Teorema del Límite Central:** demostración de la normalidad muestral.  
+3. **Distribuciones de probabilidad:** ejemplos reales con distribución Exponencial y Poisson.  
+4. **Correlaciones:** análisis de relaciones positiva, negativa y nula con datos sintéticos.  
+5. **Pruebas de normalidad:** comparación entre muestras normales y no normales (Shapiro–Wilk).  
+6. **Prueba de independencia:** test Chi-cuadrado aplicado a variables categóricas.
 
-El archivo principal del proyecto es:  
-📄 [`Taller2_segundo_corte_AI.ipynb`](https://colab.research.google.com/github/asrivasSW/AI-CLASS/blob/main/IA_taller2_corte2/Taller2_segundo_corte_AI.ipynb)
+📄 Notebook:  
+🔗 [Taller2_segundo_corte_AI.ipynb](https://colab.research.google.com/github/asrivasSW/AI-CLASS/blob/main/IA_taller2_corte2/Taller2_segundo_corte_AI.ipynb)
 
 ---
 
@@ -40,70 +44,88 @@ El archivo principal del proyecto es:
 | Librería / Tecnología | Versión (opcional) | Función Principal |
 |-----------------------|-------------------|-------------------|
 | **Python** | 3.x | Lenguaje de programación principal |
-| **NumPy (np)** | - | Operaciones con vectores y matrices |
-| **Pandas (pd)** | - | Análisis y manipulación de datos |
-| **Matplotlib (plt)** | - | Visualización de datos |
-| **SciPy (stats)** | - | Funcionalidades científicas y estadísticas |
+| **NumPy (np)** | - | Operaciones numéricas y manejo de arreglos |
+| **Pandas (pd)** | - | Manipulación y análisis de datos estructurados |
+| **Matplotlib (plt)** | - | Visualización de datos y gráficos |
 | **Seaborn (sns)** | - | Gráficos estadísticos avanzados |
-| **scikit-learn** | - | Modelado estadístico y regresión lineal |
+| **SciPy (stats)** | - | Pruebas estadísticas y distribuciones de probabilidad |
+| **scikit-learn** | - | Modelado y regresión lineal |
 
 ---
 
-## 💻 Desarrollo y Explicación
+## 💻 Desarrollo y Metodología Aplicada
+El taller siguió una **metodología de Análisis Exploratorio de Datos (EDA)**, con las siguientes etapas:
 
-### 🧪 Metodología Aplicada
-El desarrollo se basó en una metodología de **Análisis Exploratorio de Datos (EDA)**, siguiendo los pasos:
-
-1. **Preparación del Entorno:** Importación de librerías y montaje de Google Drive.  
-2. **Análisis con NumPy:** Cálculos de sesgo y curtosis para evaluar simetría y forma de distribución.  
-3. **Demostración del Teorema del Límite Central:** Simulación de medias muestrales con diferentes tamaños de muestra.  
-4. **Distribuciones de Probabilidad:**  
-   - Exponencial: tiempos de espera entre clientes.  
-   - Poisson: número de correos recibidos por hora.  
-5. **Visualización:** Representaciones gráficas (histogramas, dispersión y curvas teóricas).  
-6. **Correlaciones:** Ejemplos de correlación positiva, negativa y nula mediante datos sintéticos.
+1. **Preparación del entorno:** Importación de librerías y montaje del entorno en Google Drive.  
+2. **Análisis descriptivo:** Cálculo de sesgo, curtosis, media y desviación estándar.  
+3. **Distribuciones:** Simulación y ajuste de modelos Exponencial y Poisson, incluyendo pruebas de bondad de ajuste (K-S y Chi²).  
+4. **Visualización:** Creación de histogramas, diagramas de dispersión y curvas teóricas.  
+5. **Correlación:** Evaluación de relaciones lineales positivas, negativas y nulas entre variables.  
+6. **Inferencia estadística:** Aplicación de pruebas de normalidad e independencia para validar supuestos.
 
 ---
 
 ## 🔎 Interpretación y Análisis de Resultados
 
-### 📊 Medidas de Dispersión:
-El **rango de las notas** es de *2.40* y la **desviación estándar** de *0.7115*, reflejando una dispersión moderada.  
-Esto indica que la mayoría de las calificaciones se agrupan relativamente cerca de la **media (3.901)**, sin valores extremos significativos.
+### 📊 Medidas de Forma
+El **sesgo (-0.246)** indica una ligera asimetría hacia la izquierda, mientras que la **curtosis (-1.143)** refleja una distribución **platicúrtica**, es decir, más aplanada que la normal.  
+Esto sugiere una concentración moderada de calificaciones alrededor de la media (≈3.90).
 
-### 📈 Normalidad de los Datos:
-Según el **test de Shapiro-Wilk**, el *p-valor (0.0003)* < 0.05, lo que implica que las notas **no provienen de una distribución normal**.  
-El histograma muestra una **curva platicúrtica y asimétrica hacia la izquierda**, lo que confirma esta conclusión.
+---
 
-### 🧮 Relación Edad–Nota:
-El **coeficiente de correlación (0.046)** y la **covarianza (0.099)** indican una **relación positiva débil**, es decir, no existe una relación lineal fuerte entre la edad y la nota final.  
-La pendiente positiva sugiere una ligera tendencia al aumento de notas con la edad, aunque no es estadísticamente significativa.
+### 📈 Teorema del Límite Central
+A medida que el tamaño de las muestras aumenta (n=5, 30, 100), las distribuciones de las medias muestrales se aproximan a una **distribución normal**, incluso cuando la población original es uniforme.  
+Esto confirma empíricamente el **Teorema del Límite Central**, base fundamental de la estadística inferencial.
 
-### 🧠 Distribuciones:
-- **Exponencial:** Representa los tiempos de espera entre clientes, mostrando alta frecuencia de tiempos cortos y caída progresiva.  
-- **Poisson:** Modela el número de correos recibidos por hora, con una media empírica de 3.984 correos, ajustando adecuadamente la distribución esperada (p = 0.4695).
+---
 
-### 🔗 Correlaciones:
-- **Positiva:** Horas de estudio vs calificación (r = 0.97) → A mayor estudio, mayor rendimiento.  
-- **Negativa:** Temperatura vs ventas de chocolate (r = -0.96) → A mayor temperatura, menor venta.  
-- **Nula:** Zapatos vendidos vs accidentes de tráfico → Sin relación aparente.
+### 📉 Distribuciones de Probabilidad
+- **Exponencial (tiempos de espera entre clientes):**  
+  Media empírica = 6.086, desviación estándar = 6.166.  
+  Prueba K-S: p-valor = 0.8967 → no se rechaza H₀ → buen ajuste.  
+
+- **Poisson (emails por hora):**  
+  Media empírica = 3.984, p-valor (Chi²) = 0.4695 → ajuste adecuado.  
+
+Ambos modelos representan correctamente fenómenos del mundo real: el **tiempo entre eventos** y el **conteo de sucesos discretos**.
+
+---
+
+### 🔗 Correlaciones
+- **Positiva:** Horas de estudio vs calificación (r = 0.97) → A mayor estudio, mejor rendimiento.  
+- **Negativa:** Temperatura vs ventas de chocolate (r = -0.96) → A mayor temperatura, menores ventas.  
+- **Nula:** Zapatos vendidos vs accidentes → No existe relación entre las variables.
+
+---
+
+### 🧪 Test de Hipótesis — Prueba de Normalidad
+Se generaron dos muestras:
+- **X₁ (Uniforme):** p = 0.001 → no es normal.  
+- **X₂ (Normal):** p = 0.0857 → sí es normal.  
+
+El **test de Shapiro–Wilk** demuestra que esta prueba es adecuada para determinar si una muestra proviene o no de una distribución normal, requisito clave para análisis paramétricos.
+
+---
+
+### ⚖️ Prueba de Independencia
+Se construyó una tabla de contingencia entre las variables **“Fuma”** y **“Tos Crónica”**.  
+El **test Chi-cuadrado** obtuvo:  
+χ² = 2.5802, p = 0.1082 → no se rechaza H₀.  
+
+Esto indica que **no existe una asociación estadísticamente significativa** entre ambas variables, mostrando independencia entre los factores analizados.
 
 ---
 
 ## ✍️ Conclusión
-El desarrollo de este taller permitió **aplicar con éxito herramientas clave de la ciencia de datos en Python**, integrando el uso de librerías como **NumPy**, **Pandas**, **Matplotlib**, **SciPy** y **Scikit-Learn** para realizar un análisis estadístico completo de un conjunto de datos reales y sintéticos.
+El taller permitió aplicar de forma integral los conceptos de **análisis estadístico y científico de datos** mediante Python.  
+A través de las librerías NumPy, Pandas, Matplotlib, Seaborn, SciPy y Scikit-learn, se abordaron desde cálculos descriptivos hasta pruebas de hipótesis, reforzando la relación entre teoría y práctica.
 
-Se evidenció que:
-
-- **NumPy** facilita el cálculo eficiente de métricas estadísticas.  
-- **Pandas** optimiza la manipulación y estructuración de la información.  
-- **Matplotlib / Seaborn** permiten crear visualizaciones interpretables.  
-- **SciPy / Scikit-Learn** respaldan el análisis inferencial y el modelado lineal.  
-
-En conjunto, este trabajo cumple el objetivo planteado de **aplicar técnicas de análisis, interpretación y visualización de datos**, demostrando cómo la **Inteligencia Artificial** puede integrarse al estudio del rendimiento académico y a la comprensión de fenómenos estadísticos en distintos contextos.
+Se concluye que:
+- Las notas de los estudiantes presentan **asimetría leve y no normalidad**.  
+- El **Teorema del Límite Central** y las **distribuciones teóricas** se verifican empíricamente.  
+- Las **correlaciones y pruebas inferenciales** complementan el análisis descriptivo, mostrando cómo los métodos estadísticos son esenciales en Inteligencia Artificial y ciencia de datos aplicada.
 
 ---
 
 📎 **Repositorio GitHub:**  
 🔗 [AI-CLASS/IA_taller2_corte2](https://github.com/asrivasSW/AI-CLASS/tree/main/IA_taller2_corte2)
-
